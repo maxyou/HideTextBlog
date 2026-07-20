@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Lotus Player Lite
-email: hello@qmcntech.com
+title: Hide Text Blog
+email: hyyou2010@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A music player app with three key features: gradual volume reduction, tree-structured directories, and playlist copying.
+  This tool use random numbers to hide your text from search engines finding your internet activity.
 baseurl: "/HideTextBlog" # the subpath of your site, e.g. /blog
 url: "https://maxyou.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # github_username:  maxyou
