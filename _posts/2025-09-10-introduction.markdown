@@ -17,8 +17,8 @@ This tool use random numbers to hide your text from search engines finding your 
 Suppose your email address is "my_special_name@example.com".
 
 You can use hide-text.com to generate multiple random addresses:
-- https://hide-text.com/?c=F0ouRxQuBlwbXy5aBSYAdR9LEFkUJwAbGVwc&k=z3q4dKe5 (Random Address A)
-- https://hide-text.com/?c=GAMzNCMLCgYUFjMpMgMMLxACDSojAgxBFhUB&k=uzlGSnio (Random Address B)
+- [https://hide-text.com/?c=F0ouRxQuBlwbXy5aBSYAdR9LEFkUJwAbGVwc&k=z3q4dKe5](https://hide-text.com/?c=F0ouRxQuBlwbXy5aBSYAdR9LEFkUJwAbGVwc&k=z3q4dKe5) (Random Address A)
+- [https://hide-text.com/?c=GAMzNCMLCgYUFjMpMgMMLxACDSojAgxBFhUB&k=uzlGSnio](https://hide-text.com/?c=GAMzNCMLCgYUFjMpMgMMLxACDSojAgxBFhUB&k=uzlGSnio) (Random Address B)
 
 Clicking on any of these distinct random addresses reveals your actual address: "my_special_name@example.com".
 
