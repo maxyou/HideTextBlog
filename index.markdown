@@ -5,27 +5,9 @@
 layout: home
 ---
 
-## What's Lotus Player Lite?
+## What's Hide Text?
 
-This is a music player app with three key features: gradual volume reduction, tree-structured directories, and playlist copying.
+This tool use random numbers to hide your text from search engines finding your internet activity. It has been deployed online: 
 
-## Gallery
+- https://hide-text.com/
 
-<div class="gallery">
-</div>
-
-<style>
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.gallery img {
-  margin: 10px;
-  width: 200px; /* You can adjust the size as needed */
-  height: auto;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-}
-</style>
