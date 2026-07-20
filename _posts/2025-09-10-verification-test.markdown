@@ -17,5 +17,5 @@ Test results demonstrate that while the page as a whole is indexed, Google fails
 
 string "A": Plaintext1_fwfim13873
 
-link "B": https://hide-text.com/?c=FjREPxkjKhksNgYUfmVsR3E5RjwvOA==&k=BQ7KJWXp
+link "B": [https://hide-text.com/?c=FjREPxkjKhksNgYUfmVsR3E5RjwvOA==&k=BQ7KJWXp](https://hide-text.com/?c=FjREPxkjKhksNgYUfmVsR3E5RjwvOA==&k=BQ7KJWXp)
 
