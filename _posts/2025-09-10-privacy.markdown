@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Privacy Policy"
+date:   2026-07-20 23:12:00 +0800
+categories: jekyll update
+---
+
+## Privacy Policy
+
+### Our Commitment
+
+Thank you for using Hide Text! We are committed to protecting your privacy.
+
