@@ -1,25 +1,47 @@
 ---
 layout: post
-title:  "XOR Encryption and URL-safe Base64 encoding"
+title:  "The Math Behind HideText: XOR Encryption and URL-safe Base64"
 date:   2026-07-20 23:45:00 +0800
-categories: jekyll update
+categories: security engineering
 ---
 
 ## Technical Implementation
 
-In-Depth Analysis of XOR Encryption and Decryption
-The core encryption mechanism of this tool is based on the bitwise XOR (Exclusive OR) operation. XOR is a fundamental yet powerful binary logic operation with a simple rule: the output is 0 if the two input bits are identical, and 1 if they differ. Mathematically, it possesses a remarkable "self-inverse" property: if A ^ B = C, then C ^ B = A.
+In HideText, we prioritize simplicity and transparency. The core mechanism relies on a classic cryptographic primitive: the bitwise XOR operation, paired with URL-safe encoding for data transport.
 
-### 1. Encryption Process:
+### 1. XOR: The Symmetric logic
 
-When you input text, the program first converts it into a UTF-8 character stream. It then generates a random alphanumeric string to serve as the "key." During the encryption loop, each byte of the plaintext undergoes a bitwise XOR operation with the corresponding character code from the key. Since the key is typically shorter than the text, the program cycles through the key using a modulo operation (i % key.length). This process scrambles the original readable characters into seemingly random hexadecimal values, making it impossible for anyone without the key to decipher the original text.
+The foundation is the **Exclusive OR (XOR)** operation. In binary terms, XOR yields `1` only if the inputs are different. Its most critical property for us is being a **self-inverse** or **involution**:
 
-### 2. Data Encapsulation:
+$$ (A \oplus B) \oplus B = A $$
 
-To ensure stable transmission within URLs, the program converts the XORed hexadecimal result into URL-safe Base64 encoding (replacing `+` with `-` and `/` with `_`). This guarantees that the ciphertext—even if it contains special binary bits—can be transmitted losslessly as a URL parameter across various browsers and social platforms.
+- **Encryption**: We take the UTF-8 byte stream of your plaintext and apply the XOR operator against a random key. 
+- **Cycle-Key Logic**: Since your text is often longer than the 8-character key, we use a modulo operation `(i % key.length)` to cycle the key across the entire payload.
 
-### 3. Decryption and Security:
+This transforms human-readable strings into a raw byte sequence that carries no semantic meaning without the specific key.
 
-Decryption is essentially the reverse of the encryption process. After retrieving the key from the URL, the browser decodes the Base64 ciphertext and performs the exact same XOR operation with the key. Thanks to the properties of XOR, this step cancels out the initial scrambling, instantly restoring the original UTF-8 byte stream.
+### 2. URL-safe Base64 Encoding
 
-The advantage of this approach lies in its superior privacy: all computations (encoding, XORing, and encapsulation) take place entirely within your local browser cache. Since no backend server is involved, the key and ciphertext exist only within the shared URL link, achieving true "zero-trace" privacy protection.
+Standard Base64 encoding is not inherently safe for URLs because it uses `+`, `/`, and `=`.
+- `+` is often interpreted as a space.
+- `/` is a path delimiter.
+
+To ensure the ciphertext can be shared safely as a URL parameter (`?c=...`), we apply **URL-safe Base64** (RFC 4648), which replaces `+` with `-` and `/` with `_`. We also strip or handle the padding to keep the URL as clean as possible.
+
+### 3. Client-Side Execution
+
+A crucial technical detail: both `encode.ts` and `deXorStr` functions are executed entirely in the **user's memory (Browser context)**. 
+- The [Privacy Policy]({% post_url 2025-09-10-privacy %}) provides more details on why this "Zero-Server" architecture is secure.
+- To see this algorithm in action against real-world search crawlers, check out our [Verification and Testing Method]({% post_url 2025-09-10-verification-test %}).
+
+---
+
+### Implementation Snippet (Conceptual)
+
+```typescript
+// Simplified XOR logic
+for (let i = 0; i < encoded.length; i++) {
+  const charCode = encoded.charCodeAt(i) ^ key.charCodeAt(i % key.length);
+  // ... convert to hex and then URL-safe base64
+}
+```
