@@ -5,9 +5,11 @@ date:   2026-07-20 23:12:00 +0800
 categories: jekyll update
 ---
 
-## Privacy Policy
+## HideText Privacy Policy
 
-### Our Commitment
-
-Thank you for using Hide Text! We are committed to protecting your privacy.
+1. Client-Side Only: This is a purely static webpage. The encryption and decryption happen entirely within your browser memory. Your plaintext is never transmitted to, or stored on, any server.
+2. Zero Data Footprint: There is no backend database, no sessions, and no cookies. We do not use any third-party tracking or analytics scripts (like Google Analytics).
+3. Link-Based Security: All encrypted data and the decryption key are contained within the generated URL. Privacy is maintained as long as you keep the link secure.
+4. Anti-Indexing: The application uses noindex and canonical tags to instruct search engines not to index or display the ciphertext URLs in search results.
+5. Open Source: Our code is fully transparent and available for public audit, ensuring no "backdoors" or hidden data leaks.
 

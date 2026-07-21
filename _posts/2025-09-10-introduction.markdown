@@ -37,3 +37,10 @@ Now, imagine an acquaintance from Sub-A wants to pry into your privacy. They kno
 In reality, you are also active on Sub-B, where you use "Random Address B." Since there is no way to deduce "Random Address B" from "Random Address A," your acquaintance from Sub-A has no way of knowing about "Random Address B" and thus cannot discover your activity on Sub-B.
 
 Your privacy remains secure.
+
+## Privacy
+
+HideText is designed with a privacy-first approach. All text processing is performed entirely within your web browser. 
+
+For more details, please see our full [Privacy Policy]({% post_url 2025-09-10-privacy %}).
+
