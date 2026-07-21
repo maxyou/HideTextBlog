@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "XOR Encryption and URL-safe Base64 encoding"
-date:   2026-07-20 23:12:00 +0800
+date:   2026-07-20 23:45:00 +0800
 categories: jekyll update
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Verification and Testing Method (Empirical Proof)"
-date:   2026-07-20 23:12:00 +0800
+date:   2026-07-20 23:35:00 +0800
 categories: jekyll update
 ---
 
