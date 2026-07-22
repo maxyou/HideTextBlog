@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Introduction"
+title:  "Introduction of HideText"
 date:   2026-07-20 23:50:00 +0800
 categories: jekyll update
 ---
 
-### Introduction
+### Introduction of HideText
 
 This tool use random numbers to hide your text from search engines finding your internet activity. It has been deployed online: 
 
